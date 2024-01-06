@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-function UseState() {
+function UseState1() {
 
-    const [counter, setcounter] = useState(0)
+    const [count, setCount] = useState(0)
 
     return (
-        <div className='UseState'>
-            <button type="button" onClick={() => setcounter(counter + 1)}>Click Me {counter}</button>
-        </div>
+        <div className='UseState1'>
+            <button onClick={() => setCount(count + 1)}>Click Me {count}</button >
+        </div >
     )
 }
 
-export default UseState
+export default UseState1
