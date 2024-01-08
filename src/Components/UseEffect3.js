@@ -13,8 +13,14 @@ function UseEffect3() {
     }
 
     useEffect(() => {
-        console.log('Component Rendered');
+        console.log('Component Updated');
         window.addEventListener('mousemove', mousePosition)
+
+        // return (() => {
+        //     console.log('Component Removed');
+        //     window.removeEventListener('mousemove', mousePosition)
+        // })
+
     }, [])
 
     return (

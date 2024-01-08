@@ -2,7 +2,9 @@
 // import UseState2 from "./Components/UseState2";
 // import UseEffect from "./Components/UseEffect1";
 // import UseEffect2 from "./Components/UseEffect2";
-import UseEffect3 from "./Components/UseEffect3";
+// import UseEffect3 from "./Components/UseEffect3";
+
+import UseEffect4 from "./Components/UseEffect4";
 
 function App() {
   return (
@@ -11,7 +13,8 @@ function App() {
       {/* <UseState2 /> */}
       {/* <UseEffect /> */}
       {/* <UseEffect2/> */}
-      <UseEffect3 />
+      {/* <UseEffect3 /> */}
+      <UseEffect4 />
     </div>
   );
 }
