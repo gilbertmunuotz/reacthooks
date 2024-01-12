@@ -5,17 +5,21 @@ function UseEffect5() {
     let mycount = 0
     const [count, setCount] = useState(mycount)
 
-    const Tick = () => {
-        setCount(count + 1)
-    }
+
 
     useEffect(() => {
+
+        const Tick = () => {
+            setCount(count + 1)
+        }
+
         const myTimer = setInterval(Tick, 1000)
+
 
         return () => {
             clearInterval(myTimer)
         }
-    }, [])
+    }, [count])
 
     return (
         <div className='UseEffect5'>
