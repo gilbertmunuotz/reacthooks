@@ -1,3 +1,4 @@
+import React from "react";
 // import UseState1 from "./Components/UseState1";
 // import UseState2 from "./Components/UseState2";
 // import UseEffect from "./Components/UseEffect1";
@@ -5,8 +6,11 @@
 // import UseEffect3 from "./Components/UseEffect3";
 // import UseEffect4 from "./Components/UseEffect4";
 // import UseEffect5 from "./Components/UseEffect5";
+// import DataFetch from "./Components/DataFetch";
+import UseContext from "./Components2/UseContext";
 
-import DataFetch from "./Components/DataFetch";
+export const UserContext = React.createContext()
+
 
 function App() {
   return (
@@ -18,7 +22,11 @@ function App() {
       {/* <UseEffect3 /> */}
       {/* <UseEffect4 /> */}
       {/* <UseEffect5 /> */}
-      <DataFetch />
+      {/* <DataFetch /> */}
+
+      <UserContext.Provider value={'Erick'}>
+        <UseContext />
+      </UserContext.Provider>
     </div>
   );
 }
