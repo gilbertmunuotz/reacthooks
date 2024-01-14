@@ -1,18 +1,16 @@
-import React from 'react'
-import { UserContext } from "../App";
+import React, { useContext } from 'react'
+import { UserContext, MyContext } from "../App";
 
 function UseContext3() {
+
+    const user = useContext(UserContext)
+    const channel = useContext(MyContext)
+
     return (
         <div className='UseContext3'>
-            <UserContext.Consumer>
-                {
-                    name => {
-                        return <h2>User value {name}</h2>
-                    }
-                }
-            </UserContext.Consumer>
+            {user}   :)  {channel}
         </div>
-    )
+    )   
 }
 
 export default UseContext3

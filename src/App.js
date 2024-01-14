@@ -10,7 +10,7 @@ import React from "react";
 import UseContext from "./Components2/UseContext";
 
 export const UserContext = React.createContext()
-
+export const MyContext = React.createContext()
 
 function App() {
   return (
@@ -24,9 +24,11 @@ function App() {
       {/* <UseEffect5 /> */}
       {/* <DataFetch /> */}
 
-      <UserContext.Provider value={'Erick'}>
-        <UseContext />
-      </UserContext.Provider>
+      <MyContext.Provider value={'jamrack'}>
+        <UserContext.Provider value={'Erick'}>
+          <UseContext />
+        </UserContext.Provider>
+      </MyContext.Provider>
     </div>
   );
 }
