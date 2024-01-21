@@ -32,7 +32,6 @@ const reducerfn = (state, action) => {
   }
 }
 
-
 function App() {
 
   const [state, dispatch] = useReducer(reducerfn, initialState)
@@ -56,9 +55,11 @@ function App() {
     </MyContext.Provider> */}
         {/* <UseReducer /> */}
 
+        count : {state}
+
+        <UseReducer />
         <UseReducer1 />
         <UseReducer2 />
-        <UseReducer />
       </div>
     </MyContext.Provider>
   );
