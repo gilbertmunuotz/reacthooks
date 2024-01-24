@@ -4,19 +4,22 @@ function DataReduce2() {
 
     const initialState = {
         error: '',
-        posts: []
+        posts: [],
+        loading: true, // Add loading state
     }
 
-    const reducerfn = (state, action) => {
+    const reduce = (state, action) => {
         switch (action.type) {
             case 'Fetch_Success':
                 return {
-                    post: action.payload,
+                    ...state,
+                    posts: action.payload,
                     error: ''
                 }
             case 'Fetch_Failed':
                 return {
-                    post: [],
+                    ...state,
+                    posts: [],
                     error: 'Error....Failed To Fetch'
                 }
             default:
@@ -24,13 +27,29 @@ function DataReduce2() {
         }
     }
 
-    const [state, dispatch] = useReducer(initialState, reducerfn)
+    const [state, dispatch] = useReducer(initialState, reduce)
+
+    useEffect(() => {
+        let url = 'https://jsonplaceholder.typicode.com/posts'
+        fetch(url)
+            .then((response) => response.json()) //Parse JSON Response
+            .then((data) => dispatch({ type: 'Fetch_Success', payload: data }))
+            .catch((error) => dispatch({ type: 'Fetch_Failed' }));
+    }, [])
 
     return (
         <div className='DataReduce2'>
-
-
-
+            {state.error ? (
+                <p>{state.error}</p>
+            ) : state.loading ? (
+                <p>Loading posts...</p>
+            ) : state.posts && state.posts.length > 0 && ( // Conditional rendering
+                <ul>
+                    {state.posts.map((post) => (
+                        <li key={post.id}>{post.title}</li>
+                    ))}
+                </ul>
+            )}
         </div>
     )
 }

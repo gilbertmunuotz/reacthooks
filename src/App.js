@@ -1,5 +1,5 @@
 // import React, { useReducer } from "react";
-import DataReduce1 from "./Components3/DataReduce1";
+// import DataReduce1 from "./Components3/DataReduce1";
 // import UseReducer1 from "./Components3/UseReducer1";
 // import UseReducer2 from "./Components3/UseReducer2";
 // import UseReducer from './Components3/UseReducer';
@@ -16,6 +16,8 @@ import DataReduce1 from "./Components3/DataReduce1";
 // export const UserContext = React.createContext()
 // export const MyContext = React.createContext()
 // export const MyContext = React.createContext()
+
+import DataReduce2 from "./Components3/DataReduce2";
 
 // const initialState = 0;
 
@@ -61,7 +63,8 @@ function App() {
         <UseReducer1 />
         <UseReducer2 /> */}
 
-      <DataReduce1 />
+      {/* <DataReduce1 /> */}
+      <DataReduce2 />
 
 
     </div>

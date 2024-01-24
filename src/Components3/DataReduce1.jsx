@@ -23,7 +23,7 @@ function DataReduce1() {
         <div className='DataReduce1'>
             {posts.map(post => <li key={post.id}>{post.title}</li>)}
             : (
-            (<p>{error}</p>) 
+            (<p>{error}</p>)
             )
         </div>
 
