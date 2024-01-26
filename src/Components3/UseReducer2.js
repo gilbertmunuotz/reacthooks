@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { MyContext } from '../App'
+import React, { useContext } from 'react';
+import { MyContext } from '../App';
 
 function UseReducer2() {
 
