@@ -3,7 +3,7 @@
 // import UseReducer1 from "./Components3/UseReducer1";
 // import UseReducer2 from "./Components3/UseReducer2";
 // import UseReducer from './Components3/UseReducer';
-// // import UseReducer from "./Components2/UseReducer";
+// import UseReducer from "./Components2/UseReducer";
 // import UseState1 from "./Components/UseState1";
 // import UseState2 from "./Components/UseState2";
 // import UseEffect from "./Components/UseEffect1";
@@ -16,8 +16,10 @@
 // export const UserContext = React.createContext()
 // export const MyContext = React.createContext()
 // export const MyContext = React.createContext()
+// import DataReduce2 from "./Components3/DataReduce2";
+// import Father from "./Components4/Father";
 
-import DataReduce2 from "./Components3/DataReduce2";
+import Memo from "./Components4/Memo";
 
 // const initialState = 0;
 
@@ -64,9 +66,9 @@ function App() {
         <UseReducer2 /> */}
 
       {/* <DataReduce1 /> */}
-      <DataReduce2 />
-
-
+      {/* <DataReduce2 /> */}
+      {/* <Father /> */}
+      <Memo/>
     </div>
     // </MyContext.Provider>
   );

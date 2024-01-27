@@ -27,7 +27,7 @@ function DataReduce2() {
         }
     }
 
-    const [state, dispatch] = useReducer(initialState, reduce)
+    const [state, dispatch] = useReducer(reduce, initialState)
 
     useEffect(() => {
         let url = 'https://jsonplaceholder.typicode.com/posts'
@@ -41,8 +41,6 @@ function DataReduce2() {
         <div className='DataReduce2'>
             {state.error ? (
                 <p>{state.error}</p>
-            ) : state.loading ? (
-                <p>Loading posts...</p>
             ) : state.posts && state.posts.length > 0 && ( // Conditional rendering
                 <ul>
                     {state.posts.map((post) => (
