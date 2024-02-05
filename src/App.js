@@ -18,8 +18,9 @@
 // export const MyContext = React.createContext()
 // import DataReduce2 from "./Components3/DataReduce2";
 // import Father from "./Components4/Father";
+// import Memo from "./Components4/Memo";
 
-import Memo from "./Components4/Memo";
+import RefHook from "./Components4/RefHook";
 
 // const initialState = 0;
 
@@ -68,7 +69,8 @@ function App() {
       {/* <DataReduce1 /> */}
       {/* <DataReduce2 /> */}
       {/* <Father /> */}
-      <Memo/>
+      {/* <Memo/> */}
+      <RefHook/>
     </div>
     // </MyContext.Provider>
   );

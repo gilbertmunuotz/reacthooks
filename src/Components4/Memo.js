@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 
 function Memo() {
     const [one, setOne] = useState(0)
@@ -12,15 +12,20 @@ function Memo() {
         setSecond(second + 1)
     }
 
-    const isEven = () => {
-        return one % 2 === 0;
-    }
+    const isEven = useMemo(() => {
+        let i = 0;
+        while (i < 20000000000000000000000000000000000000000000000000000000000000000000n) {
+            i++;
+            return one % 2 === 0;
+        }
+    }, [one])
+
 
     return (
         <div className='Memo'>
             <div>
                 <button onClick={increment1}>Value is:{one}</button>
-                <span>{isEven() ? 'Even' : 'Odd'}</span>
+                <span>{isEven ? 'Even' : 'Odd'}</span>
             </div>
             <div>
                 <button onClick={increment2}>Value is:{second}</button>
